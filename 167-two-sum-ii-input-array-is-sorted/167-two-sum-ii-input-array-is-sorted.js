@@ -11,15 +11,9 @@ var twoSum = function(numbers, target) {
     twoSum = numbers[lt] + numbers[rt];
     if (twoSum === target) {
       return [lt + 1, rt + 1];
-    }
-    if (twoSum < target) {
-      lt++;
-      continue;
-    }
-    if (twoSum > target) {
-      rt--;
-      continue;
-    }
+    } else {
+			twoSum < target ? lt++ : rt--;
+		}
   }
   
 };
